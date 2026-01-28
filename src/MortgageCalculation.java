@@ -10,8 +10,6 @@ public class MortgageCalculation {
         System.out.printf("NJ monthly mortgage: $%,.2f%n", njMortgage.monthlyMortgage());
         System.out.printf("NY monthly mortgage: $%,.2f%n \n", nyMortgage.monthlyMortgage());
 
-        //TODO 2, 3, 4, AND 5
-
         // principal balance after first installment is paid for both loans
         System.out.printf("NJ mortgage principal balance after first installment: $%,.2f%n",
                 njMortgage.principalBalance());
@@ -19,8 +17,6 @@ public class MortgageCalculation {
                 nyMortgage.principalBalance());
 
         // New interest rate by lowering both rates by 25 basis points and print this new
-        System.out.println("NJ Old interest rate: " + njMortgage.getInterestRate());
-        System.out.println("NY Old interest rate: " + nyMortgage.getInterestRate() + "\n");
         njMortgage.setInterestRate(njMortgage.getInterestRate() - 0.25);
         nyMortgage.setInterestRate(nyMortgage.getInterestRate() - 0.25);
         System.out.println("NJ New interest rate: " + njMortgage.getInterestRate());
@@ -36,7 +32,7 @@ public class MortgageCalculation {
 
         System.out.printf("NJ monthly mortgage after $5000: $%,.2f%n",
                 njMortgage.monthlyMortgage());
-        System.out.printf("NY monthly mortgage after $5000: $%,.2f%n",
+        System.out.printf("NY monthly mortgage after $5000: $%,.2f%n \n",
                 nyMortgage.monthlyMortgage());
 
         // Print the current principal balance for both loans.
@@ -44,5 +40,8 @@ public class MortgageCalculation {
                 njMortgage.getAmount());
         System.out.printf("NY mortgage principal balance after $5000 payment: $%,.2f%n \n",
                 nyMortgage.getAmount());
+
+        //System.out.println(njMortgage.toString());
+        //System.out.println(nyMortgage.toString());
     }
 }

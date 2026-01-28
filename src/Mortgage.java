@@ -40,12 +40,12 @@ public class Mortgage {
      * where P = principal (amount), r = monthly rate, n = term in months.
      */
     public double monthlyMortgage() {
-        double mortgagePayment;
+        //double mortgagePayment;
         double monthlyRate = (interestRate / 100.0) / 12;
         int numberOfMonths = term * 12;
         double numerator = amount * monthlyRate * Math.pow(1 + monthlyRate, numberOfMonths);
         double denominator = Math.pow(1 + monthlyRate, numberOfMonths) - 1;
-        return mortgagePayment = numerator / denominator;
+        return numerator / denominator;
     }
     /*
      *Returns principal balance after the first installment,
